@@ -25,7 +25,6 @@ public class Main {
         }
         Arrays.sort(numbers2);
         min = numbers2[0];
-        System.out.println(min);
         max = numbers2[numbers2.length - 1];
         for(int i = 0; i < numbers.length; ++i){
 
@@ -33,7 +32,6 @@ public class Main {
             if(numbers[i] == max) temp_max = i;
 
         }
-        System.out.println(max);
         int temp_num1 = numbers[0];
         int temp_num2 = numbers[numbers.length - 1];
         numbers[0] = min;
