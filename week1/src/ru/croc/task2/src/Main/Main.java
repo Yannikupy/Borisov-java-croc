@@ -4,7 +4,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args){
+
         Locale.setDefault(new Locale("en", "US"));
         Scanner scanner = new Scanner(System.in);
         double bytes = scanner.nextDouble();
@@ -27,5 +29,7 @@ public class Main {
             System.out.format("%.1f", bytes / Math.pow(1024, 4));
             System.out.println(" TB");
         }
+
     }
+
 }

@@ -5,9 +5,12 @@ import java.math.MathContext;
 import java.util.Scanner;
 
 public class Main {
+
     static class Point {
+
         BigDecimal x;
         BigDecimal y;
+
     }
     public static void main(String[] args){
 
@@ -33,10 +36,14 @@ public class Main {
                 = new MathContext(5);
         BigDecimal square = (p.multiply(p.subtract(dist(a, b))).multiply(p.subtract(dist(a, c))).multiply(p.subtract(dist(b, c)))).sqrt(mc);
         System.out.println("Площадь треугольника: " + square.stripTrailingZeros());
+
     }
     public static BigDecimal dist(Point a, Point b) {
+
         MathContext mc
                 = new MathContext(10);
         return (((b.x.subtract(a.x)).pow(2)).add((b.y.subtract(a.y)).pow(2))).sqrt(mc) ;
+
     }
+
 }
