@@ -47,8 +47,8 @@ public class PositionOnBoard {
         }
         System.out.println(Arrays.toString(pos));
         for (int i = 1; i < positions.length; i++){  //проверяем расстояние между двумя полями, с которого и на который ходит конь
-            if((((Math.abs(pos[i].x - pos[i - 1].x) <= 2) && (Math.abs(pos[i].x - pos[i - 1].x) != 0) && (Math.abs(pos[i].y - pos[i - 1].y) == 1)
-                    || ((Math.abs(pos[i].y - pos[i - 1].y) <= 2) && (Math.abs(pos[i].y - pos[i - 1].y) != 0) && (Math.abs(pos[i].x - pos[i - 1].x) == 1 ))))){
+            if((((Math.abs(pos[i].x - pos[i - 1].x) == 2)  && (Math.abs(pos[i].y - pos[i - 1].y) == 1)
+                    || ((Math.abs(pos[i].y - pos[i - 1].y) == 2)  && (Math.abs(pos[i].x - pos[i - 1].x) == 1 ))))){
             }
             else throw new IllegalMoveException("конь так не ходит " + pos[i-1] + "->" + pos[i]);
         }
