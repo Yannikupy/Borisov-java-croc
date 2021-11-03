@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNextLine()) {
-            String code = sc.nextLine();
-            System.out.println(removeComments(code));
-        }
+        String code = "ds";
+        System.out.println(removeComments(code));
     }
 
     enum State { outsideComment, insideLineComment, insideblockComment, insideblockComment_noNewLineYet, insideString };
