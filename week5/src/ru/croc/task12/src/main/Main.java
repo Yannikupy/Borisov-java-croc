@@ -75,18 +75,18 @@ public class Main {
             }
             for(int i = 0; i < num_of_threads; i++){
                 myThreads[i] = new Thread(anotherRuns[i]);
+                myThreads[i].start();
+            }
+            for(int i = 0; i < num_of_threads; i++){
+                myThreads[i].join();
                 Pair<String, Boolean> return_value = anotherRuns[i].getValue();
                 if(return_value.getValue()){
                     pass_founded = true;
                     password = return_value.getKey();
                     break;
                 }
-                myThreads[i].start();
-            }
-            for(int i = 0; i < num_of_threads; i++){
-                myThreads[i].join();
             }
         }
-        System.out.println(password);
+        System.out.println("Password is " + password);
     }
 }
