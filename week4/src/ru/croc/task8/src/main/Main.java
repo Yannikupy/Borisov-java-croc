@@ -3,6 +3,7 @@ package main;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -12,8 +13,10 @@ public class Main {
         Scanner sc = new Scanner(path);
         int counter = 0;
         while (sc.hasNext()){
-            sc.next();
-            counter++;
+            String word = sc.next();
+            if(!Objects.equals(word, "?") && !Objects.equals(word, ".") && !Objects.equals(word, ",") && !Objects.equals(word, ";") && !Objects.equals(word, "/") && !Objects.equals(word, "!")) {
+                counter++;
+            }
         }
         System.out.println(counter);
     }
