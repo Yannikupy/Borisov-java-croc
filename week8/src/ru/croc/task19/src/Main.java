@@ -9,7 +9,7 @@ public class Main {
             writer.append(str);
         }
         catch (IOException e){
-            System.out.println("Ошибка при работе с файлом");
+           System.out.printf("Произошла ошибка при записи в файл: %s", e.getMessage());
         }
     }
 }
